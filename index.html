@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お薬登録フォーム</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">お薬登録フォーム</h1>
+      <form method="post" action="/addMedication" class="form">
+        <div class="form-group">
+          <label class="label">お薬の名前</label>
+          <input
+            type="text"
+            name="name"
+            class="input"
+            placeholder="例: アスピリン"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="label">服用時間</label>
+          <input type="time" name="scheduleTime" class="input" required />
+        </div>
+
+        <div class="form-group">
+          <label class="label">服用タイミング</label>
+          <select name="timing" class="select">
+            <option value="">選択してください</option>
+            <option value="before_meal">食前</option>
+            <option value="after_meal">食後</option>
+            <option value="between_meal">食間</option>
+            <option value="before_sleep">就寝前</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="label">服用間隔（時間）</label>
+          <input
+            type="number"
+            name="intervalHours"
+            class="input"
+            min="1"
+            max="24"
+            placeholder="例: 8"
+          />
+        </div>
+
+        <button type="submit" class="button">登録する</button>
+      </form>
+    </div>
+  </body>
+</html>
