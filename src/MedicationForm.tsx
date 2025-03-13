@@ -61,7 +61,6 @@ export const MedicationForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md mx-auto bg-white rounded-xl shadow-lg overflow-hidden md:max-w-2xl">
         <div className="px-8 py-6">
           <h1 className="text-2xl font-bold text-center text-white bg-cyan-500 py-4 rounded-lg mb-8">
@@ -94,6 +93,8 @@ export const MedicationForm = () => {
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
                 服用時間
+                <br />
+                ※入力し終わったら必ず「追加」を押してください
               </label>
               <div className="flex gap-2">
                 <input
@@ -169,6 +170,5 @@ export const MedicationForm = () => {
           </form>
         </div>
       </div>
-    </div>
   );
 };
