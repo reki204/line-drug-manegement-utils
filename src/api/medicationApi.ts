@@ -14,7 +14,7 @@ export const medicationApi = {
     // ログイン後、IDトークンを取得
     const idToken = liff.getIDToken();
 
-    const response = await fetch(`${API_BASE_URL}/medications`, {
+    const response = await fetch(`${API_BASE_URL}/addMedication`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
