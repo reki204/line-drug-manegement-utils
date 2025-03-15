@@ -94,7 +94,7 @@ export const MedicationForm = () => {
               >
                 服用時間
                 <br />
-                ※入力し終わったら必ず「追加」を押してください
+                ※入力し終わったら必ず「追加」を押してください。
               </label>
               <div className="flex gap-2">
                 <input
