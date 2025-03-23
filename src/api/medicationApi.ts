@@ -10,7 +10,6 @@ export interface MedicationData {
 
 export const medicationApi = {
   create: async (data: MedicationData) => {
-    await liff.init({ liffId: import.meta.env.VITE_LIFF_ID });
     // ログイン後、IDトークンを取得
     const idToken = liff.getIDToken();
 
