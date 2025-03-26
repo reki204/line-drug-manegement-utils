@@ -14,7 +14,7 @@ export const MedicationForm = () => {
   const [scheduleTimeInput, setScheduleTimeInput] = useState("");
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
-  // LIFFの初期化（コメントアウト解除で使用可能）
+  // LIFFの初期化
   useEffect(() => {
     (async () => {
       try {
@@ -89,13 +89,6 @@ export const MedicationForm = () => {
       console.error("error:", err);
     }
   };
-
-  const isSubmitDisabled =
-    isLoading ||
-    !formData.name.trim() ||
-    (inputMode === "time"
-      ? formData.scheduleTime!.length === 0
-      : formData.intervalHours! <= 0);
 
   return (
     <div className="max-w-md mx-auto bg-white rounded-xl shadow-lg overflow-hidden md:max-w-2xl">
@@ -216,7 +209,6 @@ export const MedicationForm = () => {
           {/* 登録ボタン */}
           <button
             type="submit"
-            disabled={isSubmitDisabled}
             className="w-full bg-emerald-500 text-white py-3 px-4 rounded-md hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition duration-200 font-medium disabled:opacity-50"
           >
             {isLoading ? "登録中..." : "登録する"}
